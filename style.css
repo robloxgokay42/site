@@ -440,6 +440,139 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid var(--border-color);
 }
 
+.main-footer a {
+    color: #888;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+.main-footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Modal Stilleri */
+.modal-overlay {
+    display: none; /* Varsayılan olarak gizli */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Karartılmış arka plan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Diğer her şeyin üzerinde */
+    backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
+}
+
+.modal-content {
+    background-color: var(--dark-card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh; /* Ekranın %80'i kadar yükseklik */
+    overflow-y: auto; /* İçerik kaydırılabilir olsun */
+    position: relative;
+    border: 1px solid var(--border-color);
+    animation: fadeInScale 0.3s ease-out; /* Açılış animasyonu */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+.modal-content h3 {
+    color: var(--heading-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.modal-content p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.modal-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.modal-scrollable-content {
+    flex-grow: 1; /* Kalan alanı doldur */
+    overflow-y: auto; /* İçeriğin kaydırılmasını sağlar */
+    padding-right: 15px; /* Scrollbar boşluğu için */
+    margin-bottom: 20px;
+}
+
+/* Özel kaydırma çubuğu (Webkit tabanlı tarayıcılar için) */
+.modal-scrollable-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-scrollable-content::-webkit-scrollbar-track {
+    background: #2a2a3e;
+    border-radius: 10px;
+}
+
+.modal-scrollable-content::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.modal-scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--text-color);
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color var(--transition-speed);
+}
+
+.close-button:hover {
+    color: #fff;
+}
+
+#modalAcceptButton {
+    margin-top: 20px;
+    width: auto;
+    align-self: center; /* Ortala */
+    padding: 10px 30px;
+}
+
+/* Modal Açılış Animasyonu */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Responsive Tasarım */
 @media (max-width: 992px) {
     .hero-content h2 {
@@ -454,6 +587,16 @@ h1, h2, h3, h4, h5, h6 {
     .package-card {
         width: 100%;
         max-width: 380px;
+    }
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal-content h2 {
+        font-size: 1.8em;
+    }
+    .modal-content h3 {
+        font-size: 1.3em;
     }
 }
 
@@ -489,6 +632,14 @@ h1, h2, h3, h4, h5, h6 {
     }
     .application-form {
         padding: 25px;
+    }
+    .modal-content {
+        max-height: 90vh; /* Mobil cihazlarda daha fazla yer kaplasın */
+    }
+    .close-button {
+        top: 10px;
+        right: 15px;
+        font-size: 1.8em;
     }
 }
 
