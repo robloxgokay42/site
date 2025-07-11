@@ -9,9 +9,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div id="disclaimerModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Sorumluluk Reddi ve Gizlilik Politikası</h2>
+            <div class="modal-scrollable-content">
+                <h3>Sorumluluk Reddi Beyanı</h3>
+                <p>NovalyaCode olarak, sunduğumuz web sitesi geliştirme hizmetleri ve paketleri hakkında doğru ve güncel bilgi sağlamayı taahhüt ederiz. Ancak, web sitemizdeki tüm bilgilerin eksiksizliği, doğruluğu veya güncelliği konusunda herhangi bir garanti vermemekteyiz.</p>
+                <ul>
+                    <li><strong>Fiyatlandırma:</strong> Web sitemizde belirtilen "Domainli Site" paketinin fiyat aralığı (₺100 - ₺550 / Yıllık), piyasa koşullarına, alan adının türüne (örn: .com, .net, .org, .xyz), müsaitliğine ve satın alma süresine göre değişiklik gösterebilir. Belirtilen fiyatlar başlangıç niteliğindedir ve kesin fiyat teklifi, projenizin detaylarına ve seçilecek domain'e göre özelleştirilmiş başvuru formu değerlendirildikten sonra tarafınıza iletilecektir. "Temel Site" paketi ücretsiz olarak sunulmaktadır ancak bu paket, özel alan adı (domain) içermemektedir ve temel hazır şablonlar kullanılarak sunulur.</li>
+                    <li><strong>Hizmet Kapsamı:</strong> Paket içerikleri ve sunulan özellikler, hizmet sözleşmesi veya teklif aşamasında belirtilen detaylara tabidir. Web sitemizdeki paket açıklamaları genel bilgilendirme amaçlıdır ve nihai hizmet detayları projenize özel olarak belirlenecektir.</li>
+                    <li><strong>Üçüncü Taraf Hizmetleri:</strong> Form gönderimleri gibi bazı işlevler için Formspree gibi üçüncü taraf servisleri kullanmaktayız. Bu servislerin veri işleme ve gizlilik politikaları kendi hüküm ve koşullarına tabidir.</li>
+                    <li><strong>Dış Bağlantılar:</strong> Sitemiz, üçüncü taraf web sitelerine bağlantılar içerebilir. Bu sitelerin içeriğinden veya gizlilik uygulamalarından sorumlu değiliz.</li>
+                    <li><strong>Değişiklik Hakkı:</strong> NovalyaCode, web sitesindeki bilgi, fiyat ve hizmet koşullarında önceden bildirim yapmaksızın değişiklik yapma hakkını saklı tutar.</li>
+                </ul>
+
+                <h3>Gizlilik Politikası</h3>
+                <p>NovalyeCode olarak, gizliliğinize büyük önem veriyoruz. Bu web sitesi üzerinden topladığımız bilgilerle ilgili politikamızı aşağıda bulabilirsiniz:</p>
+                <ul>
+                    <li><strong>Toplanan Bilgiler:</strong> Başvuru formumuz aracılığıyla ad, e-posta adresi, site ismi, site türü, site amacı, öncelikli özellikler, Discord hesabı ve düşünülen domain gibi bilgileri toplamaktayız. Bu bilgiler, web sitesi projenizle ilgili gereksinimlerinizi anlamak ve sizinle iletişime geçmek amacıyla kullanılır.</li>
+                    <li><strong>Bilgilerin Kullanımı:</strong> Topladığımız kişisel bilgiler yalnızca web sitesi projenizle ilgili iletişim kurmak, teklif hazırlamak ve hizmetlerimizi iyileştirmek amacıyla kullanılacaktır. Bilgileriniz üçüncü şahıslarla pazarlama veya diğer ticari amaçlarla paylaşılmaz.</li>
+                    <li><strong>Veri Güvenliği:</strong> Topladığımız bilgilerin güvenliğini sağlamak için makul teknik ve idari önlemleri almaktayız. Ancak internet üzerinden veri iletiminin %100 güvenli olduğu garanti edilemez.</li>
+                    <li><strong>Çerezler (Cookies):</strong> Web sitemiz, kullanıcı deneyimini iyileştirmek ve site trafiğini analiz etmek amacıyla çerezler kullanabilir. Çerez tercihlerinizi tarayıcı ayarlarınızdan yönetebilirsiniz.</li>
+                    <li><strong>Haklarınız:</strong> Kişisel verilerinizle ilgili bilgi alma, düzeltme, silme veya işlemeyi kısıtlama haklarına sahipsiniz. Bu haklarınızı kullanmak için lütfen bizimle iletişime geçin.</li>
+                </ul>
+                <p>Bu sorumluluk reddi ve gizlilik politikası metni, en son <strong>11 Temmuz 2025</strong> tarihinde güncellenmiştir.</p>
+            </div>
+            <button class="btn primary-btn" id="modalAcceptButton">Anladım ve Kabul Ediyorum</button>
+        </div>
+    </div>
     <header class="main-header">
         <div class="container">
-            <h1 class="logo">NovalyaCode</h1>
+            <h1 class="logo">NovalyeCode</h1>
             <nav>
                 <ul>
                     <li><a href="#hero">Ana Sayfa</a></li>
@@ -79,12 +108,12 @@
                 <div class="package-card basic">
                     <h3>Temel Site</h3>
                     <p class="price"><span>ÜCRETSİZ</span></p>
-                    <p class="tagline">Dijital varlığa ilk adım!</p>
+                    <p class="tagline">Dijital varlığa ilk adım! (Domain dahil değildir.)</p>
                     <ul>
                         <li><i class="fas fa-check"></i> Tek Sayfa Web Sitesi</li>
                         <li><i class="fas fa-check"></i> Hazır Şablon Kullanımı</li>
                         <li><i class="fas fa-check"></i> Temel Bilgi Sayfası</li>
-                        <li><i class="fas fa-check"></i> İletişim Formu (Formspree Destekli | Sınırlı)</li>
+                        <li><i class="fas fa-check"></i> İletişim Formu (Formspree Destekli)</li>
                         <li><i class="fas fa-check"></i> Mobil Uyumlu Tasarım</li>
                         <li><i class="fas fa-times"></i> Özel Alan Adı (Domain)</li>
                         <li><i class="fas fa-times"></i> Gelişmiş SEO</li>
@@ -109,7 +138,7 @@
                     <a href="#contact" class="btn package-btn">Hemen Başvur</a>
                 </div>
             </div>
-            <p class="package-note"><em>*Domainli site fiyatları, seçilecek alan adına (domain) göre değişiklik gösterebilir. Detaylı bilgi için başvuru formunu doldurunuz.</em></p>
+            <p class="package-note"><em>*Domainli site fiyatları, seçilecek alan adına (domain) ve piyasa koşullarına göre değişiklik gösterebilir. Kesin bilgi için başvuru formunu doldurunuz.</em></p>
         </div>
     </section>
 
@@ -117,8 +146,7 @@
         <div class="container">
             <h2 class="section-title">Web Sitesi Başvuru Formu</h2>
             <p class="section-description">Hayalinizdeki web sitesini oluşturmak için formu doldurun, size en kısa sürede dönüş yapalım.</p>
-            <p class="section-description">Dönüşler mail üzerinden yapılmaktadır. Discord hesabı girmeniz durumunda 2 hesabınızdanda geri dönüş yapılacaktır.</p>
-            <form action="https://formspree.io/f/xjkrnlvr" method="POST" class="application-form">
+            <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" class="application-form">
                 <div class="form-group">
                     <label for="site_name">Site İsmi *</label>
                     <input type="text" id="site_name" name="Site Ismi" required>
@@ -169,13 +197,12 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2025 NovalyaCode. Tüm Hakları Saklıdır.</p>
+            <p>&copy; 2025 NovalyaCode. Tüm Hakları Saklıdır. 
+                <a href="#" id="openDisclaimerLink">Gizlilik Politikası & Sorumluluk Reddi</a>
+                </p>
         </div>
     </footer>
 
-    <script>
-        // FAQ bölümü olsaydı bu kısım için JS yazılabilirdi, şimdilik bu kadar yeterli.
-        // Form gönderimi Formspree tarafından yönetildiği için burada ek JS gerekmiyor.
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
