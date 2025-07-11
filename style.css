@@ -452,16 +452,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Modal Stilleri */
 .modal-overlay {
-    display: none; /* Varsayılan olarak gizli */
+    /* Varsayılan olarak gizli kalacak, JS ile gösterilecek */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Karartılmış arka plan */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Merkezi hizalama için */
+    align-items: center; /* Merkezi hizalama için */
     z-index: 2000; /* Diğer her şeyin üzerinde */
     backdrop-filter: blur(5px); /* Hafif bulanıklık efekti */
 }
@@ -474,7 +474,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 700px;
     width: 90%;
     max-height: 80vh; /* Ekranın %80'i kadar yükseklik */
-    overflow-y: auto; /* İçerik kaydırılabilir olsun */
+    overflow-y: hidden; /* İçerik kaydırılabilir olsun */
     position: relative;
     border: 1px solid var(--border-color);
     animation: fadeInScale 0.3s ease-out; /* Açılış animasyonu */
